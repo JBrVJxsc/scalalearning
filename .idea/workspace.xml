@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbc04e2c-e040-42c1-bf7d-34d2572495a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/scala/exercises/BaseExercise.java" afterPath="$PROJECT_DIR$/src/com/scala/exercises/BaseExercise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter1/Exercise1.scala" afterPath="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter1/Exercise1.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/scala/exercises/ScalaExercise.scala" afterPath="$PROJECT_DIR$/src/com/scala/exercises/ScalaExercise.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -68,7 +68,7 @@
       <file leaf-file-name="BaseExercise.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/scala/exercises/BaseExercise.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1621" max-vertical-offset="2176">
+            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2176">
               <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -85,8 +85,8 @@
       <file leaf-file-name="Exercise1.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter1/Exercise1.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="425">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="70" max-vertical-offset="425">
+              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               <folding>
                 <element signature="e#48#88#0" expanded="true" />
               </folding>
@@ -97,8 +97,8 @@
       <file leaf-file-name="ScalaExercise.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/scala/exercises/ScalaExercise.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0056338026" vertical-offset="257" max-vertical-offset="612">
-              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            <state vertical-scroll-proportion="-0.53239435" vertical-offset="461" max-vertical-offset="867">
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -180,8 +180,8 @@
         <option value="$PROJECT_DIR$/src/com/scala/interfaces/Exercise.scala" />
         <option value="$PROJECT_DIR$/src/com/scala/exercises/Exercise.scala" />
         <option value="$PROJECT_DIR$/src/com/scala/exercises/Question.scala" />
-        <option value="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter1/Exercise1.scala" />
         <option value="$PROJECT_DIR$/src/com/scala/exercises/BaseExercise.java" />
+        <option value="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter1/Exercise1.scala" />
         <option value="$PROJECT_DIR$/src/com/scala/exercises/ScalaExercise.scala" />
       </list>
     </option>
@@ -725,7 +725,11 @@
       <created>1404569061113</created>
       <updated>1404569061113</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Code">
+      <created>1404569753520</created>
+      <updated>1404569753520</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -979,16 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter1/Exercise1.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="425">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#48#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://E:/Soft/scala-2.11.0-M4/src/scala-library-src.jar!/scala/collection/generic/GenericCompanion.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="884">
@@ -1012,10 +1006,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter1/Exercise1.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="70" max-vertical-offset="425">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="e#48#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/scala/exercises/ScalaExercise.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0056338026" vertical-offset="257" max-vertical-offset="612">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state vertical-scroll-proportion="-0.53239435" vertical-offset="461" max-vertical-offset="867">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
           <folding />
         </state>
       </provider>

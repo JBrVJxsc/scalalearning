@@ -11,9 +11,9 @@ class Exercise1 extends ScalaExercise with Exercise {
 
   override def getSummary: String = "Chapter1"
 
-  addQ("q1", () => print(100))
-  addQ("q2", () => print(101))
-  addQ("q3", () => print(102))
-  addQ("q4", () => print(103))
-  addQ("q5", () => print(104))
+  addQ(() => print(100))
+  addQ(() => print(101))
+  addQ(() => print(102))
+  addQ(() => print(103))
+  addQ(() => print(104))
 }
