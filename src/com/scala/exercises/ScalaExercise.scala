@@ -17,6 +17,10 @@ abstract class ScalaExercise extends BaseExercise {
       print()
     }
   }
+
+  protected def addQ(name: String, answer: () => Unit) {
+    questionArrayList.add(new Question(name, answer))
+  }
 }
 
 class Question(val name: String, val answer: () => Unit) {

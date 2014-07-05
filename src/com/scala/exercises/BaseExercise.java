@@ -137,10 +137,6 @@ public abstract class BaseExercise {
         return System.currentTimeMillis() - timer.pop();
     }
 
-    protected void addQ(Question question) {
-        questionArrayList.add(question);
-    }
-
     @Override
     public String toString() {
         return getName();
