@@ -263,7 +263,7 @@ public class MainForm {
     class ExercisesComparator implements Comparator {
         @Override
         public int compare(Object o1, Object o2) {
-            if (((IExercise) o1).getID() < ((IExercise) o2).getID()) {
+            if (((IExercise) o1).getID() > ((IExercise) o2).getID()) {
                 return 1;
             }
             return -1;
