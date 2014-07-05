@@ -1,7 +1,7 @@
 package com.scala.exercises.impatient
 
-import com.scala.interfaces.Exercise
 import com.scala.exercises.BaseExercise
+import com.scala.interfaces.Exercise
 
 /**
  * Created by Who on 2014/7/5.
@@ -11,8 +11,7 @@ class chapter1 extends BaseExercise with Exercise {
 
   override def getSummary: String = "Chapter1"
 
-  override def run(): Unit =
-  {
+  override def run(): Unit = {
 
   }
 }

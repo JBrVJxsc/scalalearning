@@ -11,5 +11,9 @@ class chapter2 extends BaseExercise with Exercise {
 
   override def getSummary: String = "Chapter2"
 
-  override def run(): Unit = {}
+  override def run(): Unit = {
+    show("Hello!")
+    timerOn();
+    print(timerOff());
+  }
 }
