@@ -1,4 +1,4 @@
-package com.scala.exercises.impatient
+package com.scala.exercises.impatient.chapter2
 
 import com.scala.exercises.BaseExercise
 import com.scala.interfaces.Exercise
@@ -13,7 +13,5 @@ class chapter2 extends BaseExercise with Exercise {
 
   override def run(): Unit = {
     show("Hello!")
-    timerOn();
-    print(timerOff());
   }
 }

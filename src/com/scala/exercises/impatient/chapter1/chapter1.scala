@@ -1,4 +1,4 @@
-package com.scala.exercises.impatient
+package com.scala.exercises.impatient.chapter1
 
 import com.scala.exercises.BaseExercise
 import com.scala.interfaces.Exercise
