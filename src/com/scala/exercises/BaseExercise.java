@@ -5,7 +5,6 @@ import com.scala.listeners.PrintConsoleListener;
 import com.scala.listeners.SetParameterListener;
 
 import javax.swing.*;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
@@ -18,7 +17,6 @@ public abstract class BaseExercise {
     private PrintConsoleListener printConsoleListener = new PrintConsoleListener();
     private SetParameterListener setParameterListener = new SetParameterListener();
     private Stack<Long> timer = new Stack<Long>();
-    protected ArrayList<Question> questionArrayList = new ArrayList<Question>();
 
     public long getID() {
         String className = getClass().getSimpleName();
