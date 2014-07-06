@@ -162,7 +162,7 @@ class Exercise2 extends ScalaExercise with Exercise {
 
   addQ(
     () => {
-      var x: Unit = null
+      var x: Unit = {}
       var y: Int = 0
       x = y = 1
     }
@@ -183,6 +183,75 @@ class Exercise2 extends ScalaExercise with Exercise {
       def countdown(n: Int) {
         for (i <- 0 to n reverse) {
           print(i)
+        }
+      }
+    }
+  )
+
+  addQ(
+    () => {
+      var l = 1l
+      for (c <- "Hello") {
+        l *= c.toLong
+      }
+      print(l)
+    }
+  )
+
+  addQ(
+    () => {
+      var l = 1l
+      val i = "Hello".iterator
+      while (i.hasNext) {
+        l *= i.next().toLong
+      }
+      print(l)
+    }
+  )
+
+  addQ(
+    () => {
+      print(product("Hello"))
+
+      def product(s: String): Long = {
+        var l = 1l
+        for (i <- s) {
+          l *= i.toLong
+        }
+        l
+      }
+    }
+  )
+
+  addQ(
+    () => {
+      print(product("Hello"))
+
+      def product(s: String): Long = {
+        if (s.length == 0)
+          1
+        else
+          s.head.toLong * product(s.tail)
+      }
+    }
+  )
+
+  addQ(
+    () => {
+      print(cal(2, 3))
+
+      def cal(x: Int, n: Int): Int = {
+        if (n > 0 && n % 2 == 0) {
+          cal(x, n / 2) * cal(x, n / 2)
+        }
+        else if (n > 0 && n % 2 != 0) {
+          x * cal(x, n - 1)
+        }
+        else if (n == 0) {
+          1
+        }
+        else {
+          1 / cal(x, -n)
         }
       }
     }
