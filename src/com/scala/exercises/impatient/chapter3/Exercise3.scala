@@ -1,9 +1,13 @@
 package com.scala.exercises.impatient.chapter3
 
+import java.awt.datatransfer.{DataFlavor, SystemFlavorMap}
+import java.util.TimeZone
+
 import com.scala.exercises.ScalaExercise
 import com.scala.interfaces.Exercise
 
 import scala.collection.mutable.ArrayBuffer
+import scala.util.Random
 
 /**
  * Created by Who on 2014/7/6.
@@ -98,7 +102,146 @@ class Exercise3 extends ScalaExercise with Exercise {
       print(b.mkString(" and "))
 
       val matrix = Array.ofDim[Double](3, 4)
-      print(matrix)
+      for (i <- 0 until 3; j <- 0 until 4) {
+        print(matrix(i)(j))
+      }
+      for (i <- 0 until 3; j <- 0 until 4) {
+        matrix(i)(j) = 1d
+      }
+      for (i <- 0 until 3; j <- 0 until 4) {
+        print(matrix(i)(j))
+      }
+    }
+  )
+
+  addQ(
+    () => {
+      print(makeArray(20))
+
+      def makeArray(n: Int): Array[Int] = {
+        val arrayList: ArrayBuffer[Int] = new ArrayBuffer[Int]
+        for (i <- 0 until n) {
+          arrayList += Random.nextInt(n)
+        }
+        arrayList.toArray
+      }
+    }
+  )
+
+  addQ(
+    () => {
+      val a = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+      print(a)
+      print(trans(a))
+      def trans(array: Array[Int]): Array[Int] = {
+        val n = array.length / 2
+        for (i <- 0 to n if 2 * i + 1 < a.length) {
+          val temp = array(i * 2 + 1)
+          array(i * 2 + 1) = array(i * 2)
+          array(i * 2) = temp
+        }
+        array
+      }
+    }
+  )
+
+  addQ(
+    () => {
+      val a = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+      print(a)
+      print(trans(a))
+
+      def trans(array: Array[Int]): Array[Int] = {
+        val transed = for (i <- 0 until array.length) yield {
+          if (i % 2 == 0) {
+            if (i + 1 == array.length) {
+              array(i)
+            }
+            else {
+              array(i + 1)
+            }
+          }
+          else {
+            array(i - 1)
+          }
+        }
+        transed.toArray
+      }
+    }
+  )
+
+  addQ(
+    () => {
+      val a = Array[Int](-1, -2, -3, -3, 0, 0, 0, 100, 99, -4, -5, -6, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+      print(a)
+      print(make(a))
+
+      def make(array: Array[Int]): Array[Int] = {
+        val p = for (i <- array if i > 0) yield i
+        val z = for (i <- array if i == 0) yield i
+        val n = for (i <- array if i < 0) yield i
+        (p.toBuffer ++= z.toBuffer ++= n.toBuffer).toArray
+      }
+    }
+  )
+
+  addQ(
+    () => {
+      val a = Array[Double](-1, -2, -3, -3, 10)
+      print(a.sum / a.length)
+    }
+  )
+
+  addQ(
+    () => {
+      val a = Array[Int](-1, -2, -3, -3, 10)
+      print(a.reverse)
+      print(a.toBuffer.reverse)
+    }
+  )
+
+  addQ(
+    () => {
+      val a = Array[Int](-1, -2, -3, -3, 10)
+      val aBackUp: ArrayBuffer[Int] = ArrayBuffer[Int]()
+      for (i <- a if !aBackUp.contains(i)) {
+        aBackUp += i
+      }
+      print(aBackUp)
+    }
+  )
+
+  addQ(
+    () => {
+      val a = ArrayBuffer[Int](-1, -2, -3, -3, 10)
+      print(a)
+      remove(a)
+      print(a)
+      def remove(array: ArrayBuffer[Int]): Unit = {
+        var ns = for (i <- 0 until array.length if array(i) < 0) yield i
+        ns = ns.reverse.dropRight(1)
+        for (i <- ns) {
+          array.remove(i)
+        }
+      }
+    }
+  )
+
+  addQ(
+    () => {
+      val list = TimeZone.getAvailableIDs.toBuffer;
+      val usaList = list.filter(_.contains("America/"))
+      var usaListNew = for (i <- usaList) yield i.replace("America/", "")
+      usaListNew = usaListNew.sortWith((x, y) => x < y)
+      print(usaListNew)
+    }
+  )
+
+  addQ(
+    () => {
+      val flavors = SystemFlavorMap.getDefaultFlavorMap.asInstanceOf[SystemFlavorMap]
+      val value = flavors.getNativesForFlavor(DataFlavor.imageFlavor)
+      print(value)
     }
   )
 }
