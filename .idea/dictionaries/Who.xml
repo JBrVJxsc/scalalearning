@@ -2,6 +2,8 @@
   <dictionary name="Who">
     <words>
       <w>noninfringement</w>
+      <w>nums</w>
+      <w>strs</w>
       <w>trys</w>
     </words>
   </dictionary>
