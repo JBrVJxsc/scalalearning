@@ -16,4 +16,32 @@ class Exercise2 extends ScalaExercise with Exercise {
       print((if (true) "Hello" else 1).getClass)
     }
   )
+
+  addT(
+    () => {
+      for (i <- 1 to 20) {
+        print(i)
+      }
+    }
+  )
+
+  addT(
+    () => {
+      val str: String = "Hello, World!"
+      for (i <- 0 until str.length) {
+        print(str(i).toString)
+      }
+    }
+  )
+
+  addT(
+    () => {
+      val str: String = "Hello, World!"
+      for (i <- str) {
+        print(i.toString)
+      }
+    }
+  )
+
+
 }

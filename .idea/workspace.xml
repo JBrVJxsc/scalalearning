@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbc04e2c-e040-42c1-bf7d-34d2572495a9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter2/Exercise2.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Who.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter1/Exercise1.scala" afterPath="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter1/Exercise1.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/scala/exercises/ScalaExercise.scala" afterPath="$PROJECT_DIR$/src/com/scala/exercises/ScalaExercise.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter2/Exercise2.scala" afterPath="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter2/Exercise2.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ScalaLearning.iws" />
@@ -32,8 +29,8 @@
       <file leaf-file-name="Exercise2.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter2/Exercise2.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6728232" vertical-offset="0" max-vertical-offset="425">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.64116096" vertical-offset="522" max-vertical-offset="901">
+              <caret line="45" column="2" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
               <folding>
                 <element signature="e#48#88#0" expanded="true" />
               </folding>
@@ -692,7 +689,11 @@
       <created>1404619490709</created>
       <updated>1404619490709</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Code">
+      <created>1404623300169</created>
+      <updated>1404623300169</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1113,8 +1114,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter2/Exercise2.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6728232" vertical-offset="0" max-vertical-offset="425">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.64116096" vertical-offset="522" max-vertical-offset="901">
+          <caret line="45" column="2" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
           <folding>
             <element signature="e#48#88#0" expanded="true" />
           </folding>
