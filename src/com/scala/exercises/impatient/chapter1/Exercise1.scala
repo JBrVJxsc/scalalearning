@@ -11,8 +11,6 @@ import scala.util.Random
 class Exercise1 extends ScalaExercise with Exercise {
   override def getName: String = "Chapter1"
 
-  override def getSummary: String = "Chapter1"
-
   addQ()
 
   addQ(

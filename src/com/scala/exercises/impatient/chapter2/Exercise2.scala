@@ -9,8 +9,6 @@ import com.scala.interfaces.Exercise
 class Exercise2 extends ScalaExercise with Exercise {
   override def getName: String = "Chapter2"
 
-  override def getSummary: String = "Chapter2"
-
   addT(
     () => {
       print((if (true) "Hello" else 1).getClass)

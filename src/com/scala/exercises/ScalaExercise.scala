@@ -10,6 +10,10 @@ abstract class ScalaExercise extends BaseExercise {
   val questionList: ArrayBuffer[Question] = ArrayBuffer[Question]()
   val tryList: ArrayBuffer[Try] = ArrayBuffer[Try]()
 
+  override def getSummary(): String = {
+    getName
+  }
+
   override def run(): Unit = {
     runTrys()
     runQuestions()

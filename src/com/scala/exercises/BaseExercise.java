@@ -25,6 +25,8 @@ public abstract class BaseExercise {
 
     public abstract String getName();
 
+    public abstract String getSummary();
+
     public abstract void run();
 
     public void addPrintConsoleListener(PrintConsoleListener printConsoleListener) {
