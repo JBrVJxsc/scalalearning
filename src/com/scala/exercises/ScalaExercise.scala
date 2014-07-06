@@ -52,7 +52,7 @@ abstract class ScalaExercise extends BaseExercise {
   }
 }
 
-class Question(val name: String, val answer: () => Unit = () => {}) {
+class Question(val name: String, val answer: () => Unit = () => Unit) {
 
 }
 
