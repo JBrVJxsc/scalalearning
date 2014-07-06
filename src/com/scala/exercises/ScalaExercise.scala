@@ -21,6 +21,10 @@ abstract class ScalaExercise extends BaseExercise {
     }
   }
 
+  protected def addQ() {
+    questionList += new Question("Question" + Question.getCounter())
+  }
+
   protected def addQ(answer: () => Unit) {
     questionList += new Question("Question" + Question.getCounter(), answer)
   }
@@ -30,7 +34,7 @@ abstract class ScalaExercise extends BaseExercise {
   }
 }
 
-class Question(val name: String, val answer: () => Unit) {
+class Question(val name: String, val answer: () => Unit = () => {}) {
 
 }
 
