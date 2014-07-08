@@ -9,5 +9,38 @@ import com.scala.interfaces.Exercise
 class Exercise5 extends ScalaExercise with Exercise {
   override def getName: String = "Chapter5"
 
+  addT(
+    () => {
+      val myCounter = new Counter
+      myCounter.increment()
+      print(myCounter.current)
+    }
+  )
 
+  addT(
+    () => {
+      val person = new Person("Xu ZHANG")
+      person.age = 100
+      print(person.age)
+    }
+  )
+
+  addT(
+    () => {
+      val chatter = new Network
+      val myFace = new Network
+      val fred = chatter.join("Fred")
+      val wilma = chatter.join("Wilma")
+      fred.contacts += wilma
+      val barney = myFace.join("Barney")
+      fred.contacts += barney
+    }
+  )
+
+  addT(
+    () => {
+      val testOuter = (new Network).getTestOuter.getTestOuterNumber
+      print(testOuter)
+    }
+  )
 }
