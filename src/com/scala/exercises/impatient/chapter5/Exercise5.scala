@@ -43,4 +43,19 @@ class Exercise5 extends ScalaExercise with Exercise {
       print(testOuter)
     }
   )
+
+  addQ(
+    () => {
+      class Counter {
+        private var value = 0
+
+        def increment() =
+          if (value != Int.MaxValue) {
+            value += 1
+          }
+
+        def getValue = value
+      }
+    }
+  )
 }
