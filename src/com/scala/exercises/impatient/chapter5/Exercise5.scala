@@ -63,45 +63,38 @@ class Exercise5 extends ScalaExercise with Exercise {
     () => {
 
       class BankAccount {
-        private var balance = 0d
+        private var balanceValue = 0d
 
-        def deposit(value: Double): Double = {
+        def balance = balanceValue
+
+        def deposit(value: Double) = {
           if (value > 0) {
-            balance += value
+            balanceValue += value
           }
-          balance
         }
 
-        def withdraw(value: Double): Double = {
-          if (value <= balance) {
-            balance -= value
+        def withdraw(value: Double) = {
+          if (value <= balanceValue) {
+            balanceValue -= value
           }
-
-          balance
         }
       }
 
       val bankAccount = new BankAccount
-      println(bankAccount.deposit(1000))
-      println(bankAccount.withdraw(499))
+      bankAccount.deposit(1000)
+      println("\n" + bankAccount.balance)
+      bankAccount.withdraw(499)
+      println(bankAccount.balance)
     }
   )
 
   addQ(
     () => {
 
-      class Time {
-        private var hours = 0
-        private var minutes = 0
+      class Time(val hours: Int, val minutes: Int) {
 
-
-        def this(hours: Int, minutes: Int) {
-          this()
-          if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
-            throw new Exception("Wrong format of the Time.")
-          }
-          this.hours = hours
-          this.minutes = minutes
+        if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
+          throw new Exception("Wrong format of the Time.")
         }
 
         def before(other: Time): Boolean = {
@@ -126,11 +119,98 @@ class Exercise5 extends ScalaExercise with Exercise {
       val time1 = new Time(22, 22)
       val time2 = new Time(21, 22)
       val time3 = new Time(22, 21)
-      println(time1.before(time2))
+      println("\n" + time1.before(time2))
       println(time1.before(time3))
       println(time2.before(time1))
       println(time3.before(time1))
       println(time2.before(time3))
+    }
+  )
+
+  addQ(
+    () => {
+      class Time(val hours: Int, val minutes: Int) {
+        private var minutesFormat = 0
+
+        if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
+          throw new Exception("Wrong format of the Time.")
+        }
+        minutesFormat = hours * 60 + minutes - 1
+
+        def before(other: Time): Boolean = {
+          minutesFormat < other.minutesFormat
+        }
+      }
+
+      val time1 = new Time(22, 22)
+      val time2 = new Time(21, 22)
+      val time3 = new Time(22, 21)
+      println("\n" + time1.before(time2))
+      println(time1.before(time3))
+      println(time2.before(time1))
+      println(time3.before(time1))
+      println(time2.before(time3))
+    }
+  )
+
+  addQ()
+
+  addQ(
+    () => {
+      class Person(private var age: Int) {
+        if (age < 0) {
+          age = 0
+        }
+
+        def getAge = age
+      }
+
+      val p = new Person(-10)
+      println("\n" + p.getAge)
+    }
+  )
+
+  addQ(
+    () => {
+      class Person(name: String) {
+        println("\n" + "My name is " + name.split(" ")(0) + " " + name.split(" ")(1))
+      }
+
+      val p = new Person("Xu ZHANG")
+    }
+  )
+
+  addQ(
+    () => {
+
+      class Car {
+        def this(producer: String, model: String) {
+          this()
+        }
+
+        def this(producer: String, model: String, year: Int) {
+          this(producer, model)
+        }
+
+        def this(producer: String, model: String, year: Int = -1, number: String = "") {
+          this(producer, model, year)
+        }
+      }
+    }
+  )
+
+  addQ()
+
+  addQ(
+    () => {
+      class Employee {
+        val name = "John Q. Public"
+        var salary = 0.0
+
+        def this(name: String, salary: Double) {
+          this()
+        }
+      }
     }
   )
 }
