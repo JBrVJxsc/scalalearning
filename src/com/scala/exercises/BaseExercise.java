@@ -67,30 +67,14 @@ public abstract class BaseExercise {
         return print(string);
     }
 
-    protected String print(double d) {
-        return print(String.valueOf(d));
-    }
-
-    protected String print(double[] ds) {
-        String string = "";
-        for (double d : ds) {
-            string += String.valueOf(d) + " ";
-        }
-        return print(string);
-    }
-
     protected String print(Double d) {
         return print(String.valueOf(d));
     }
 
-    protected String print(long l) {
-        return print(String.valueOf(l));
-    }
-
-    protected String print(long[] ls) {
+    protected String print(Double[] ds) {
         String string = "";
-        for (long l : ls) {
-            string += String.valueOf(l) + " ";
+        for (Double d : ds) {
+            string += String.valueOf(d) + " ";
         }
         return print(string);
     }
@@ -99,20 +83,24 @@ public abstract class BaseExercise {
         return print(String.valueOf(l));
     }
 
-    protected String print(int i) {
-        return print(String.valueOf(i));
-    }
-
-    protected String print(int[] is) {
+    protected String print(Long[] ls) {
         String string = "";
-        for (int i : is) {
-            string += String.valueOf(i) + " ";
+        for (Long l : ls) {
+            string += String.valueOf(l) + " ";
         }
         return print(string);
     }
 
     protected String print(Integer i) {
         return print(String.valueOf(i));
+    }
+
+    protected String print(Integer[] is) {
+        String string = "";
+        for (Integer i : is) {
+            string += String.valueOf(i) + " ";
+        }
+        return print(string);
     }
 
     protected String print(String string) {
