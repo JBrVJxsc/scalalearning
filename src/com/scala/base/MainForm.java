@@ -84,6 +84,7 @@ public class MainForm {
         txtConsole.setBackground(Color.black);
         txtConsole.setForeground(Color.green);
         txtConsole.setCaretColor(Color.green);
+        btRun.setEnabled(false);
     }
 
     private void initExercises() {
@@ -97,6 +98,7 @@ public class MainForm {
             IExercise exercise = (IExercise) exerciseList.get(i);
             cmbExercises.addItem(exercise);
         }
+        btRun.setEnabled(true);
     }
 
     private void initListener() {
