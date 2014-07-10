@@ -1,5 +1,7 @@
 package com.scala.exercises.impatient.chapter8
 
+import java.awt.Point
+
 import com.scala.exercises.ScalaExercise
 import com.scala.interfaces.Exercise
 
@@ -121,7 +123,7 @@ class Exercise8 extends ScalaExercise with Exercise {
 
       class SimpleItem() extends Item {
 
-        private var itemPrice  = 0.0
+        private var itemPrice = 0.0
 
         private var itemDescription = ""
 
@@ -162,6 +164,38 @@ class Exercise8 extends ScalaExercise with Exercise {
 
       println("\n" + bundle.price)
       println(bundle.description)
+    }
+  )
+
+  addQ(
+    () => {
+      class Point(x: Int, y: Int) {
+
+      }
+
+      class LabeledPoint(label: String, x: Int, y: Int) extends Point(x, y) {
+
+      }
+    }
+  )
+
+  addQ(
+    () => {
+      abstract class Shape {
+        def centerPoint: Point
+      }
+
+      class Rectangle extends Shape {
+        def centerPoint(): Point = {
+          null
+        }
+      }
+
+      class Circle extends Shape {
+        def centerPoint(): Point = {
+          null
+        }
+      }
     }
   )
 }
