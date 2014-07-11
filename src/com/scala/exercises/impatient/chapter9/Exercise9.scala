@@ -1,5 +1,7 @@
 package com.scala.exercises.impatient.chapter9
 
+import java.io.File
+
 import com.scala.exercises.ScalaExercise
 import com.scala.interfaces.Exercise
 
@@ -68,6 +70,44 @@ class Exercise9 extends ScalaExercise with Exercise {
       // This line of code will print to the console directly.
       //"ls -al .." !
       print("ls -al .." !!)
+
+      "ls -al .." #> new File("output.txt") !
     }
   )
+
+  addQ(
+    () => {
+      val fileName = getClass.getResource("myfile.txt").getPath
+      val source = Source.fromFile(fileName)
+      var content = ""
+      for (i <- source.getLines) {
+        content = i + "\n" + content
+      }
+      print(content)
+    }
+  )
+
+  addQ()
+
+  addQ()
+
+  addQ()
+
+  addQ(
+    () => {
+      for (i <- 0 to 20) {
+        print(math.pow(2, i), 1 / math.pow(2, i))
+      }
+    }
+  )
+
+  addQ()
+
+  addQ()
+
+  addQ()
+
+  addQ()
+
+  addQ()
 }

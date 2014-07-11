@@ -9,5 +9,14 @@ import com.scala.interfaces.Exercise
 class Exercise7 extends ScalaExercise with Exercise {
   override def getName: String = "Chapter7"
 
-
+  addQ()
+  addQ()
+  addQ()
+  addQ()
+  addQ()
+  addQ()
+  addQ()
+  addQ()
+  addQ()
+  addQ()
 }
