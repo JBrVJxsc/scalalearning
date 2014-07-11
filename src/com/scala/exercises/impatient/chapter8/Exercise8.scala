@@ -1,6 +1,6 @@
 package com.scala.exercises.impatient.chapter8
 
-import java.awt.Point
+import java.awt.{Rectangle, Point}
 
 import com.scala.exercises.ScalaExercise
 import com.scala.interfaces.Exercise
@@ -30,6 +30,15 @@ class Exercise8 extends ScalaExercise with Exercise {
       }
 
       println("\n" + alien.greeting)
+    }
+  )
+
+  addT(
+    () => {
+      val ant = new Ant
+      val antPlus = new AntPlus
+      print(ant.env.length)
+      print(antPlus.env.length)
     }
   )
 
@@ -198,4 +207,18 @@ class Exercise8 extends ScalaExercise with Exercise {
       }
     }
   )
+
+  addQ(
+    () => {
+      class Square(original: Point = new Point(0, 0), width: Double = 0.0) extends Rectangle {
+
+      }
+    }
+  )
+
+  addQ()
+
+  addQ()
+
+  addQ()
 }
