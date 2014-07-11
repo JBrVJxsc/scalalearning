@@ -115,6 +115,9 @@ public class MainForm {
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if (btRun.getText() == "Run") {
+                    if (currentExercise == null) {
+                        return;
+                    }
                     resetConsole(currentExercise);
                     consoleWorker = null;
                     consoleWorker = new ConsoleWorker(frame);
