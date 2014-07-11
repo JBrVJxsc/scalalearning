@@ -13,8 +13,20 @@ class Exercise9 extends ScalaExercise with Exercise {
 
   addT(
     () => {
-      val source = Source.fromFile("myfile.txt")
-      val test = 0
+      val fileName = getClass.getResource("myfile.txt").getPath
+      val source = Source.fromFile(fileName)
+      val lineIterator = source.getLines()
+      for (i <- lineIterator) {
+        print(i)
+      }
+
+      val lines = source.getLines().toArray
+      print(lines)
+
+      val contents = source.mkString
+      print(contents)
+
+      source.close()
     }
   )
 }

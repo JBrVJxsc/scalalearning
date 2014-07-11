@@ -29,4 +29,45 @@ class Exercise9 extends ScalaExercise with Exercise {
       source.close()
     }
   )
+
+  addT(
+    () => {
+      val fileName = getClass.getResource("myfile.txt").getPath
+      val source = Source.fromFile(fileName)
+
+      val lines = source.getLines().toArray
+      print(lines)
+
+      source.close()
+    }
+  )
+
+  addT(
+    () => {
+      val fileName = getClass.getResource("myfile.txt").getPath
+      val source = Source.fromFile(fileName)
+
+      val contents = source.mkString
+      print(contents)
+
+      source.close()
+    }
+  )
+
+  addT(
+    () => {
+      val source = Source.fromURL("http://baidu.com")
+      print(source.mkString)
+      source.close()
+    }
+  )
+
+  addT(
+    () => {
+      import scala.sys.process._
+      // This line of code will print to the console directly.
+      //"ls -al .." !
+      print("ls -al .." !!)
+    }
+  )
 }
