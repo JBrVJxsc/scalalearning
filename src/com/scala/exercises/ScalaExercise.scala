@@ -39,6 +39,10 @@ abstract class ScalaExercise extends BaseExercise {
     questionList += new Question("Question" + Question.getCounter)
   }
 
+  protected def addQ(block: Unit) {
+    addQ(blockToMethod(block))
+  }
+
   protected def addQ(answer: () => Unit) {
     addQ("Question" + Question.getCounter, answer)
   }
@@ -47,12 +51,22 @@ abstract class ScalaExercise extends BaseExercise {
     questionList += new Question(name, answer)
   }
 
+  protected def addT(block: Unit) {
+    addT(blockToMethod(block))
+  }
+
   protected def addT(t: () => Unit) {
     addT("Try" + Try.getCounter, t)
   }
 
   protected def addT(name: String, t: () => Unit) {
     tryList += new Try(name, t)
+  }
+
+  protected def blockToMethod(block: Unit): () => Unit = {
+    () => {
+      block
+    }
   }
 }
 
