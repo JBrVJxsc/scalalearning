@@ -21,17 +21,17 @@ abstract class ScalaExercise extends BaseExercise {
 
   def runQuestions(): Unit = {
     for (question <- questionList) {
-      print(question.name)
+      super.print(question.name)
       question.answer()
-      print()
+      super.print()
     }
   }
 
   def runTrys(): Unit = {
     for (t <- tryList) {
-      print(t.name)
+      super.print(t.name)
       t.t()
-      print()
+      super.print()
     }
   }
 
