@@ -109,9 +109,121 @@ class Exercise11 extends ScalaExercise with Exercise {
 
   addQ(
     () => {
+      class Money(var d: Int, var c: Double) {
 
+        if (c > 100) {
+          d += (c / 100).asInstanceOf[Int]
+          c = c % 100
+        }
+
+        def +(money: Money) = {
+          Money(d + money.d, c + money.c)
+        }
+
+        def -(money: Money) = {
+          val newD = ((d * 100 + c - money.d * 100 - money.c) / 100).asInstanceOf[Int]
+          val newC = (d * 100 + c - money.d * 100 - money.c) % 100
+          Money(newD, newC)
+        }
+
+        def ==(money: Money) = {
+          d * 100 + c == money.d * 100 + money.c
+        }
+
+        def unary_- = {
+          Money(-d, -c)
+        }
+
+        override def toString: String = {
+          var value = d + c / 100
+          value.toString
+        }
+      }
+
+      object Money {
+        def apply(d: Int, c: Double) = {
+          new Money(d, c)
+        }
+      }
+
+      val m1 = Money(1, 75)
+      println("\n" + m1)
+      val m2 = Money(0, 50)
+      println(m2)
+      val m3 = Money(2, 25)
+      println(m3)
+      println(m1 + m2)
+      println(m1 + m2 == m3)
+      println(m2 - m1)
+      println(m1 - m2)
+      println(-m1)
     }
   )
 
+  addQ()
 
+  addQ()
+
+  addQ(
+    () => {
+      class BigSequence {
+        var seq = 0l
+
+        def apply(index: Int) = {
+
+        }
+
+        def update(index: Int, value: Int) = {
+
+        }
+      }
+    }
+  )
+
+  addQ(
+    () => {
+      class Matrix(val row: Int = 2, val col: Int = 2) {
+
+        if (row <= 0 || col <= 0) {
+          throw new Exception("Wrong parameter.")
+        }
+
+        val mat = Array.ofDim[Int](row, col)
+
+        def apply(row: Int)(col: Int) = {
+          mat(row)(col)
+        }
+
+        def update(row: Int, col: Int, value: Int) = {
+          mat(row)(col) = value
+        }
+
+        def +(other: Matrix) = {
+
+          if (mat.length != other.mat.length || mat(0).length != other.mat(0).length) {
+            throw new Exception("Wrong operand.")
+          }
+
+          val row = mat.length
+          val col = mat(0).length
+          val newMat = Array.ofDim[Int](row, col)
+
+          for (i <- 0 until row; j <- 0 until col) {
+            newMat(i)(j) = mat(i)(j) + other(i)(j)
+          }
+          newMat
+        }
+      }
+
+      val mat1 = new Matrix
+      mat1(0, 0) = 3
+      mat1(0, 1) = 3
+      mat1(1, 0) = 3
+      mat1(1, 1) = 3
+      val mat2 = new Matrix(2, 2)
+      val mat3 = mat1 + mat2
+      println("\n" + mat1(0)(0))
+      println(mat3(0)(0))
+    }
+  )
 }
