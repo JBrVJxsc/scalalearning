@@ -134,4 +134,36 @@ class Exercise12 extends ScalaExercise with Exercise {
       }
     }
   )
+
+  addQ(
+    () => {
+      def values(fun: Int => Int, low: Int, high: Int) = {
+        for (i <- low to high) yield (i, fun(i))
+      }
+
+      print(values(x => x * x, -5, 5))
+    }
+  )
+
+  addQ(
+    () => {
+      val array = Array[Int](1, 2, 3, 4, 5)
+      var max = array.reduceLeft(_.max(_))
+      max = array.reduceLeft(_ max _)
+      print(max)
+    }
+  )
+
+  addQ(
+    () => {
+      val array = Array[Int](1, 2, 3, 4, 5)
+      print(array.reduceLeft(_ * _))
+    }
+  )
+
+  addQ(
+    () => {
+
+    }
+  )
 }
