@@ -7,7 +7,7 @@ import com.scala.interfaces.Exercise
  * Created by Who on 14-7-13.
  */
 class Exercise12 extends ScalaExercise with Exercise {
-  override def getName: String = "Exercise12"
+  override def getName: String = "Chapter12"
 
   addT(
     () => {

@@ -11,7 +11,7 @@ import scala.collection.mutable.ArrayBuffer
  * Created by Who on 14-7-10.
  */
 class Exercise8 extends ScalaExercise with Exercise {
-  override def getName: String = "Exercise8"
+  override def getName: String = "Chapter8"
 
   addT(
     () => {

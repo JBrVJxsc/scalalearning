@@ -11,7 +11,7 @@ import scala.io.Source
  * Created by Who on 14-7-11.
  */
 class Exercise9 extends ScalaExercise with Exercise {
-  override def getName: String = "Exercise9"
+  override def getName: String = "Chapter9"
 
   addT(
     () => {
