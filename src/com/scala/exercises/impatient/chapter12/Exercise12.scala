@@ -35,10 +35,6 @@ class Exercise12 extends ScalaExercise with Exercise {
   )
 
   addT(
-    println((1 to 19).map(_.toString))
-  )
-
-  addT(
     () => {
       print((1 to 9).reduceLeft(_ * _))
     }
@@ -82,10 +78,43 @@ class Exercise12 extends ScalaExercise with Exercise {
       val d = Array(1, 2)
       var result = a.corresponds(b)(_.equalsIgnoreCase(_))
       print(result)
-      result = a.corresponds(d)(_==_)
+      result = a.corresponds(d)(_ == _)
       print(result)
     }
   )
 
+  addT(
+    () => {
+      def runInThread(block: () => Unit) {
+        new Thread {
+          override def run() {
+            block()
+          }
+        }.start()
+      }
 
+      runInThread {
+        () => print("Hi"); Thread.sleep(1000); print("Bye")
+      }
+    }
+  )
+
+  addT(
+    () => {
+      def runInThread(block: => Unit) {
+        new Thread {
+          override def run() {
+            block
+          }
+        }.start()
+      }
+
+      runInThread({
+        print("Hi");
+        Thread.sleep(1000);
+        print("Bye")
+      }
+      )
+    }
+  )
 }
