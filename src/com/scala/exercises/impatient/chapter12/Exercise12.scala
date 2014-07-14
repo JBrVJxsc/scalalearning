@@ -117,4 +117,21 @@ class Exercise12 extends ScalaExercise with Exercise {
       )
     }
   )
+
+  addT(
+    () => {
+      def until(condition: => Boolean)(block: => Unit) {
+        if (!condition) {
+          block
+          until(condition)(block)
+        }
+      }
+
+      var x = 10
+      until(x == 0) {
+        x -= 1
+        print(x)
+      }
+    }
+  )
 }
