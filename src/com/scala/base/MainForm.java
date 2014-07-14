@@ -99,6 +99,7 @@ public class MainForm {
             cmbExercises.addItem(exercise);
         }
         btRun.setEnabled(true);
+        run();
     }
 
     private void initListener() {
@@ -115,35 +116,43 @@ public class MainForm {
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if (btRun.getText() == "Run") {
-                    if (currentExercise == null) {
-                        return;
-                    }
-                    resetConsole(currentExercise);
-                    consoleWorker = null;
-                    consoleWorker = new ConsoleWorker(frame);
-                    startTime = System.currentTimeMillis();
-                    running = true;
-                    consoleWorker.start();
+                    run();
                 } else {
-                    printConsole("\n\nExercise has stopped manually.");
-                    bottomConsole();
-                    endTime = System.currentTimeMillis();
-                    String parameterInfo = "";
-                    for (Parameter parameter : parameterList) {
-                        parameterInfo += "\n" + parameter.getName() + ": " + parameter.getValue().toString();
-                    }
-                    if (parameterInfo != "") {
-                        parameterInfo = "\n\nParameters:" + parameterInfo;
-                        printConsole(parameterInfo);
-                    }
-                    printConsole("\n\nTotal running time: " + String.valueOf(getRunTime()) + " ms.");
-                    running = false;
-                    consoleWorker.stop();
-                    consoleWorker = null;
-                    btRun.setText("Run");
+                    stop();
                 }
             }
         });
+    }
+
+    private void run() {
+        if (currentExercise == null) {
+            return;
+        }
+        resetConsole(currentExercise);
+        consoleWorker = null;
+        consoleWorker = new ConsoleWorker(frame);
+        startTime = System.currentTimeMillis();
+        running = true;
+        consoleWorker.start();
+    }
+
+    private void stop() {
+        printConsole("\n\nExercise has stopped manually.");
+        bottomConsole();
+        endTime = System.currentTimeMillis();
+        String parameterInfo = "";
+        for (Parameter parameter : parameterList) {
+            parameterInfo += "\n" + parameter.getName() + ": " + parameter.getValue().toString();
+        }
+        if (parameterInfo != "") {
+            parameterInfo = "\n\nParameters:" + parameterInfo;
+            printConsole(parameterInfo);
+        }
+        printConsole("\n\nTotal running time: " + String.valueOf(getRunTime()) + " ms.");
+        running = false;
+        consoleWorker.stop();
+        consoleWorker = null;
+        btRun.setText("Run");
     }
 
     private void resetConsole(IExercise exercise) {

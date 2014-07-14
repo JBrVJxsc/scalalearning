@@ -43,5 +43,12 @@ class Exercise13 extends ScalaExercise with Exercise {
     }
   )
 
-
+  addT(
+    () => {
+      val s = Set(1, 2)
+      val s2 = Set(2, 3, 4)
+      print(s | s2)
+      print(s & s2)
+    }
+  )
 }
