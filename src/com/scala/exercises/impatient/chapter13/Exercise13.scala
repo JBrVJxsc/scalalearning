@@ -3,6 +3,8 @@ package com.scala.exercises.impatient.chapter13
 import com.scala.exercises.ScalaExercise
 import com.scala.interfaces.Exercise
 
+import scala.collection.mutable
+
 /**
  * Created by Who on 14-7-14.
  */
@@ -120,7 +122,7 @@ class Exercise13 extends ScalaExercise with Exercise {
       print(numsFrom(10).tail.head)
       print(numsFrom(10).take(5).force)
       // Do not do this.
-//      print(numsFrom(10).force)
+      //      print(numsFrom(10).force)
     }
   )
 
@@ -158,7 +160,7 @@ class Exercise13 extends ScalaExercise with Exercise {
     () => {
       print("Non_concurrent:")
       timerOn()
-      for (i <- 0 to 999999999) {}
+      for (i <- 0 to 9999) {}
       print("Done: " + timerOff() + " ms.")
     }
   )
@@ -167,8 +169,147 @@ class Exercise13 extends ScalaExercise with Exercise {
     () => {
       print("Concurrent:")
       timerOn()
-      for (i <- (0 to 999999999).par) {}
+      for (i <- (0 to 9999).par) {}
       print("Done: " + timerOff() + " ms.")
+    }
+  )
+
+  addT(
+    () => {
+      val a = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 0)
+      val an = a.map(_ != 0)
+      print(an.mkString(","))
+    }
+  )
+
+  addT(
+    () => {
+      val map = mutable.Map("a" -> 1, "b" -> 2)
+      for (i <- map) {
+        print(i.getClass)
+      }
+      print(("a" -> 1).getClass)
+    }
+  )
+
+  addQ(
+    () => {
+      def indexes(str: String) = {
+        var map = Map[Char, Set[Int]]()
+        var counter = -1
+        // Another way.
+        //        for (i <- str) {
+        //          if (map.contains(i)) {
+        //            map += i -> (map(i) + counter)
+        //          } else {
+        //            map += i -> Set(counter)
+        //          }
+        //          counter += 1
+        //        }
+        str.foreach(x => if (map.contains(x)) map += x -> (map(x) + newCounter) else map += x -> Set(newCounter))
+        def newCounter: Int = {
+          counter += 1
+          counter
+        }
+        map
+      }
+      print(indexes("Mississippi"))
+    }
+  )
+
+  addQ(
+    () => {
+      var counter = -1
+      def newCounter = {
+        counter += 1
+        counter
+      }
+
+      def indexes(str: String) = {
+        val map = Map[Char, List[Int]]()
+        def loop(i: Iterator[Char], map: Map[Char, List[Int]]): Map[Char, List[Int]] = {
+          if (i.hasNext) {
+            val next = i.next()
+            if (map.contains(next)) {
+              loop(i, map + (next -> (map(next) ::: List(newCounter))))
+            } else {
+              loop(i, map + (next -> List(newCounter)))
+            }
+          } else {
+            map
+          }
+        }
+        loop(str.iterator, map)
+      }
+
+      print(indexes("Mississippi"))
+    }
+  )
+
+  addQ(
+    () => {
+      def departZero(linkedList: mutable.LinkedList[Int]) = {
+        linkedList.filter(_ != 0)
+      }
+      val linkedList = mutable.LinkedList[Int](-1, 2, 3, 4, 0, 3, 0, 1, 0, 3, 5, 0, 9, 8, 67, 0, 0, 0, 75, 5, 44, 0)
+      print(departZero(linkedList))
+    }
+  )
+
+  addQ(
+    () => {
+      def pair(strs: Array[String], map: Map[String, Int]) = {
+        strs.flatMap(map.get(_))
+      }
+      print(pair(Array("Tom", "Fred", "Harry"), Map[String, Int]("Tom" -> 3, "Dick" -> 4, "Harry" -> 5)).mkString(","))
+    }
+  )
+
+  addQ(
+    () => {
+      def makeString(t: TraversableOnce[Any], sep: String) = {
+        t.reduceLeft(_.toString + sep + _.toString)
+      }
+
+      def a = Array(1, 2, 3, 4, 5)
+      print(makeString(a, ","))
+    }
+  )
+
+  addQ(
+    () => {
+      val lst = List(1, 2, 3, 4, 5)
+      print((lst :\ List[Int]())((x: Int, y: List[Int]) => y ::: List(x)))
+      print((List[Int]() /: lst)(_ :+ _))
+    }
+  )
+
+  addQ(
+    () => {
+      val prices = Array[Double](1, 2, 3)
+      val quantities = Array[Double](3, 2, 1)
+      print(((prices zip quantities) map {
+        Function.tupled(_ * _)
+      }).mkString(",")
+      )
+    }
+  )
+
+  addQ(
+    () => {
+      def trans(array: Array[Double], colNum: Int) = {
+        array.grouped(colNum)
+      }
+      val v = trans(Array(1, 2, 3, 4, 5, 6), 3)
+      while (v.hasNext) {
+        print(v.next().mkString(", "))
+      }
+    }
+  )
+
+  addQ(
+    () => {
+
     }
   )
 }
