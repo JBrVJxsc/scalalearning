@@ -7,6 +7,10 @@ class Fraction(val num: Int,val den: Int) {
   def *(second: Fraction) = {
     Fraction(num * second.num, den * second.den)
   }
+
+  def unapply(input: Fraction) = {
+    if (input.den == 0) None else Some((input.num, input.den))
+  }
 }
 
 object Fraction {

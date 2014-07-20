@@ -7,10 +7,7 @@ import com.scala.listeners.SetParameterListener;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -72,6 +69,19 @@ public class MainForm {
         frame.pack();
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
+
+        final Toolkit toolkit = Toolkit.getDefaultToolkit();
+        toolkit.addAWTEventListener(new AWTEventListener(){
+            @Override public void eventDispatched(AWTEvent e){
+                if (e.getID() == KeyEvent.KEY_PRESSED) {
+                    KeyEvent evt = (KeyEvent) e;
+                    if (evt.getKeyCode() == KeyEvent.VK_ESCAPE) {
+                        frame.dispose();
+                        System.exit(0);
+                    }
+                }
+            }
+        },AWTEvent.KEY_EVENT_MASK);
 
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel");

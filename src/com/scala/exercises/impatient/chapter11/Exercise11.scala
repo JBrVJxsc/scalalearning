@@ -101,6 +101,14 @@ class Exercise11 extends ScalaExercise with Exercise {
     }
   )
 
+  addT(
+    () => {
+      val fraction = Fraction(3, 4) * Fraction(2, 5)
+      val fraction(a, b) = Fraction(3, 4) * Fraction(2, 5)
+      print(a + " " + b)
+    }
+  )
+
   addQ()
 
   addQ()
