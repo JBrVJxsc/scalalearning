@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbc04e2c-e040-42c1-bf7d-34d2572495a9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter14/Amount.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter14/Dollar.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter14/Exercise14.scala" afterPath="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter14/Exercise14.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter15/Exercise15.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ScalaLearning.iws" />
@@ -28,11 +26,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Exercise14.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Exercise14.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter14/Exercise14.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.6332736" vertical-offset="6605" max-vertical-offset="8806">
-              <caret line="508" column="17" selection-start-line="508" selection-start-column="17" selection-end-line="508" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="8247" max-vertical-offset="8806">
+              <caret line="436" column="48" selection-start-line="436" selection-start-column="48" selection-end-line="436" selection-end-column="48" />
+              <folding>
+                <element signature="e#49#89#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Exercise15.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter15/Exercise15.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3041145" vertical-offset="0" max-vertical-offset="559">
+              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
               <folding>
                 <element signature="e#49#89#0" expanded="true" />
               </folding>
@@ -113,16 +123,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WrapAsScala.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://E:/Software/Coding/scala-2.10.2/src/scala-library-src.jar!/scala/collection/convert/WrapAsScala.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3375" max-vertical-offset="3995">
-              <caret line="231" column="32" selection-start-line="231" selection-start-column="32" selection-end-line="231" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Wrappers.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://E:/Software/Coding/scala-2.10.2/src/scala-library-src.jar!/scala/collection/convert/Wrappers.scala">
           <provider selected="true" editor-type-id="text-editor">
@@ -146,7 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/scala/interfaces/Exercise.scala" />
         <option value="$PROJECT_DIR$/src/com/scala/exercises/Exercise.scala" />
         <option value="$PROJECT_DIR$/src/com/scala/exercises/Question.scala" />
         <option value="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter1/Exercise1.scala" />
@@ -197,6 +196,7 @@
         <option value="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter14/Dollar.scala" />
         <option value="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter14/Amount.scala" />
         <option value="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter14/Exercise14.scala" />
+        <option value="$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter15/Exercise15.scala" />
       </list>
     </option>
   </component>
@@ -353,46 +353,8 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="chapter14" />
+              <option name="myItemId" value="chapter15" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScalaLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scalalearning" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exercises" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impatient" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chapter14" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Amount.scala" />
-              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -956,7 +918,11 @@
       <created>1405862798811</created>
       <updated>1405862798811</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Code">
+      <created>1405949661162</created>
+      <updated>1405949661162</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1040,14 +1006,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/scala/exercises/ScalaExercise.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1496">
-          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter12/Exercise12.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4284">
@@ -1421,8 +1379,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter14/Exercise14.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.6332736" vertical-offset="6605" max-vertical-offset="8806">
-          <caret line="508" column="17" selection-start-line="508" selection-start-column="17" selection-end-line="508" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="8247" max-vertical-offset="8806">
+          <caret line="436" column="48" selection-start-line="436" selection-start-column="48" selection-end-line="436" selection-end-column="48" />
+          <folding>
+            <element signature="e#49#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/scala/exercises/impatient/chapter15/Exercise15.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3041145" vertical-offset="0" max-vertical-offset="559">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
           <folding>
             <element signature="e#49#89#0" expanded="true" />
           </folding>
